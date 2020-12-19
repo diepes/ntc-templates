@@ -399,6 +399,7 @@ hp_procurve_show_trunks.textfsm, .*, hp_procurve, sh[[ow]] tr[[unks]]
 hp_procurve_show_vlans.textfsm, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.textfsm, .*, hp_procurve, sh[[ow]] ar[[p]]
 
+huawei_ont_display_info_summary.textfsm, .*, huawei_ont, disp[[lay]] ont info sum[[mary]]
 huawei_vrp_display_interface_brief.textfsm, .*, huawei_vrp, disp[[lay]] inter[[face]] br[[ief]]
 huawei_vrp_display_lldp_neighbor.textfsm, .*, huawei_vrp, disp[[lay]] lldp nei[[ghbor]]
 huawei_vrp_display_temperature.textfsm, .*, huawei_vrp, disp[[lay]] tem[[perature]]

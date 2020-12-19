@@ -1,0 +1,35 @@
+---
+parsed_sample:
+  - port: "0/0/3"
+    ont_total: "2"
+    ont_online: "2"
+    ont_id:
+      - "2"
+      - "3"
+    ont_state:
+      - "online"
+      - "online"
+    ont_uptime:
+      - "2020-09-04 15:00:24"
+      - "2020-09-17 16:46:07"
+    ont_downtime:
+      - "2020-09-04 14:59:15"
+      - "2020-09-17 16:45:16"
+    ont_cause:
+      - "dying-gasp"
+      - "dying-gasp"
+    ont_sn:
+      - "SNAABBCCDDFF123B"
+      - "SNAABBCCDDFF456B"
+    ont_distance:
+      - "4239"
+      - "3963"
+    ont_rx_dbm:
+      - "-22.07"
+      - "-12.47"
+    ont_tx_dbm:
+      - "2.16"
+      - "2.26"
+    ont_description:
+      - "Fname_Sname_zone_Sec"
+      - "Fname_Sector_5"

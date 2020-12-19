@@ -1,0 +1,24 @@
+   MA5608T(config-if-gpon-0/0)#display ont info summary
+   { portid<U><0,7> }:3
+
+    Command:
+          display ont info summary 3
+    Command is being executed. Please wait
+    ------------------------------------------------------------------------------
+    In port 0/0/3, the total of ONTs are: 2, online: 2
+    ------------------------------------------------------------------------------
+    ONT  Run     Last                Last                Last
+    ID   State   UpTime              DownTime            DownCause
+    ------------------------------------------------------------------------------
+    2    online  2020-09-04 15:00:24 2020-09-04 14:59:15 dying-gasp
+    3    online  2020-09-17 16:46:07 2020-09-17 16:45:16 dying-gasp
+    ------------------------------------------------------------------------------
+    ONT        SN        Type          Distance Rx/Tx power  Description
+    ID                                    (m)      (dBm)
+    ------------------------------------------------------------------------------
+    2   SNAABBCCDDFF123B HG8546M          4239  -22.07/2.16  Fname_Sname_zone_Sec
+    3   SNAABBCCDDFF456B EG8141A5         3963  -12.47/2.26  Fname_Sector_5
+   ------------------------------------------------------------------------------
+
+
+  MA5608T(config-if-gpon-0/0)#

@@ -1,0 +1,39 @@
+Value PORT (\S+)
+Value ONT_TOTAL (\d+)
+Value ONT_ONLINE (\d+)
+Value List ONT_ID (\d+)
+Value List ONT_STATE (\w+)
+Value List ONT_UPTIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})
+Value List ONT_DOWNTIME (\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})
+Value List ONT_CAUSE (\S+)
+Value List ONT_SN (\w+)
+Value List ONT_DISTANCE (\d+)
+Value List ONT_RX_DBM (\S+)
+Value List ONT_TX_DBM (\S+)
+Value List ONT_DESCRIPTION (\S+)
+
+Start
+  #In port 0/0/3, the total of ONTs are: 2, online: 2
+  ^\s*In port ${PORT}, the total of ONTs are: ${ONT_TOTAL}, online: ${ONT_ONLINE}\s*$$
+  ^\s+ID\s+State\s+UpTime\s+DownTime\s+DownCause -> GetOntState
+  # Filter extra lines
+  ^.+display ont info summary
+  ^\s*\{\s+portid
+  ^\s+Command:\s*$$
+  ^\s+Command\sis\sbeing\sexecuted
+  ^\s+ONT\s+Run\s+Last\s+Last\s+Last
+
+GetOntState
+  ^\s\s+${ONT_ID}\s\s\s\s+${ONT_STATE}\s\s+${ONT_UPTIME}\s+${ONT_DOWNTIME}\s+${ONT_CAUSE}
+  ^\s*ONT\s+SN\s+Type\s+Distance\s+Rx/Tx power\s+Description -> GetOntSN
+  ^\s*-+\s*$$
+  ^\s*$$
+  ^. -> Error
+
+GetOntSN
+  ^\s+\d+\s+${ONT_SN}\s+\w+\s+${ONT_DISTANCE}\s+${ONT_RX_DBM}\/${ONT_TX_DBM}\s+${ONT_DESCRIPTION}\s*$$
+  ^\s+ID\s+\(m\)\s+\(dBm\)\s*$$
+  ^.*\(config-if-gpon-\S+\)#\s*$$
+  ^\s*-+\s*$$
+  ^\s*$$
+  ^. -> Error

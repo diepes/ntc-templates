@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - port: "Gi1/0/6"
+    status: "down"
+    protocol: "down"
+    descrip: "SWP | VLAN 21 | NODOT1X"
+  - port: "Gi1/0/7"
+    status: "down"
+    protocol: "down"
+    descrip: "SWP | VLAN 21 | NODOT1X"
+  - port: "Gi1/0/8"
+    status: "down"
+    protocol: "down"
+    descrip: "SWP | VLAN 21 | NODOT1X"

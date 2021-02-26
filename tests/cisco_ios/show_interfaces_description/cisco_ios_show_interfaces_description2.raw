@@ -1,0 +1,5 @@
+show interfaces description
+Interface                      Status         Protocol Description
+Gi1/0/6                        down           down     SWP | VLAN 21 | NODOT1X
+Gi1/0/7                        down           down     SWP | VLAN 21 | NODOT1X
+Gi1/0/8                        down           down     SWP | VLAN 21 | NODOT1X
